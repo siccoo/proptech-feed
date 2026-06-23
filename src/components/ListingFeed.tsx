@@ -2,7 +2,6 @@ import React, { useRef } from 'react';
 import { MapPin, Tag, Heart, MessageSquare, Send, Bookmark, CheckCircle, Play, ChevronRight } from 'lucide-react';
 import type { Post } from '../types/feed';
 
-// Mock Data conforming strictly to visual assets
 const mockStories = [
   { name: 'Alex', avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150' },
   { name: 'Jordan', avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150' },
@@ -67,12 +66,11 @@ const mockPosts: Post[] = [
 export const ListingFeed: React.FC = () => {
   const storiesContainerRef = useRef<HTMLDivElement>(null);
 
-  // Smooth scroll handler targeting individual item step increments
   const scrollNextStory = () => {
     if (storiesContainerRef.current) {
       const element = storiesContainerRef.current;
       const itemWidth = 62;
-      const gap = 14;      
+      const gap = 14;
       element.scrollBy({
         left: itemWidth + gap,
         behavior: 'smooth'
@@ -82,10 +80,10 @@ export const ListingFeed: React.FC = () => {
 
   return (
     <div className="flex-1 max-w-2xl px-4 py-4 space-y-4 mx-auto w-full">
-      
+
       {/* Stories / Avatars Carousel */}
       <div className="relative group">
-        <div 
+        <div
           ref={storiesContainerRef}
           className="flex gap-3.5 overflow-x-auto pb-1 scrollbar-none scroll-smooth"
         >
@@ -101,7 +99,7 @@ export const ListingFeed: React.FC = () => {
 
         {/* Floating Right Navigation Arrow Button */}
         <div className="absolute right-0 top-[11px] bottom-0 flex items-center justify-center pl-8 pb-7 from-[#0B0C0F] via-[#0B0C0F]/80 to-transparent pointer-events-none pr-1">
-          <button 
+          <button
             onClick={scrollNextStory}
             className="hidden md:flex h-6 w-6 items-center justify-center rounded-full bg-zinc-950 border border-zinc-800 text-zinc-100 shadow-xl pointer-events-auto hover:bg-zinc-900 active:scale-95 transition-all cursor-pointer"
             aria-label="Next stories"
@@ -123,9 +121,9 @@ export const ListingFeed: React.FC = () => {
             <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150" alt="Current User" className="object-cover h-full w-full" />
           </div>
           <div className="w-full space-y-3">
-            <input 
-              type="text" 
-              placeholder="Share an update, ask a question, say hi..." 
+            <input
+              type="text"
+              placeholder="Share an update, ask a question, say hi..."
               className="w-full bg-transparent text-sm text-zinc-200 outline-none placeholder-zinc-500"
             />
             <div className="flex items-center justify-between pt-1">
@@ -144,7 +142,7 @@ export const ListingFeed: React.FC = () => {
       <div className="space-y-4">
         {mockPosts.map((post) => (
           <article key={post.id} className="rounded-2xl bg-[#0F1113] p-4 border border-[rgba(255,255,255,0.06)] space-y-3.5">
-            
+
             {/* Header section */}
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
@@ -165,10 +163,8 @@ export const ListingFeed: React.FC = () => {
               <button className="text-zinc-600 hover:text-zinc-400">•••</button>
             </div>
 
-            {/* Description Body */}
             <p className="text-sm leading-relaxed text-zinc-300 whitespace-pre-line">{post.content}</p>
 
-            {/* Tags / Meta properties info row */}
             <div className="flex flex-wrap items-center gap-2 text-xs">
               {post.location && (
                 <span className="flex items-center gap-1 rounded-full bg-zinc-800/40 px-2.5 py-1 text-zinc-400">
@@ -176,9 +172,8 @@ export const ListingFeed: React.FC = () => {
                 </span>
               )}
               {post.status && (
-                <span className={`flex items-center gap-1 rounded-full px-2.5 py-1 font-semibold ${
-                  post.status === 'For Sale' ? 'bg-blue-500/10 text-blue-400' : 'bg-emerald-500/10 text-emerald-400'
-                }`}>
+                <span className={`flex items-center gap-1 rounded-full px-2.5 py-1 font-semibold ${post.status === 'For Sale' ? 'bg-blue-500/10 text-blue-400' : 'bg-emerald-500/10 text-emerald-400'
+                  }`}>
                   <Tag className="h-3 w-3" /> {post.status}
                 </span>
               )}
@@ -188,7 +183,7 @@ export const ListingFeed: React.FC = () => {
             {post.media && post.media.length > 0 && (
               <div className="relative overflow-hidden rounded-xl bg-zinc-950 max-h-[380px] group aspect-video">
                 <img src={post.media[0].url} alt="Post content file" className="h-full w-full object-cover" />
-                
+
                 {post.media[0].type === 'video' && (
                   <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
                     <button className="flex h-12 w-12 items-center justify-center rounded-full bg-black/40 backdrop-blur-md text-white border border-white/20 transition-transform group-hover:scale-105">
@@ -230,8 +225,8 @@ export const ListingFeed: React.FC = () => {
             {/* Multi-tier social context preview */}
             <div className="flex items-center gap-1.5 text-xs text-zinc-500">
               <div className="flex -space-x-1.5">
-                <span className="h-4 w-4 rounded-full bg-zinc-600 ring-2 ring-[#141517] overflow-hidden"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=50" className="object-cover"/></span>
-                <span className="h-4 w-4 rounded-full bg-zinc-500 ring-2 ring-[#141517] overflow-hidden"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=50" className="object-cover"/></span>
+                <span className="h-4 w-4 rounded-full bg-zinc-600 ring-2 ring-[#141517] overflow-hidden"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=50" className="object-cover" /></span>
+                <span className="h-4 w-4 rounded-full bg-zinc-500 ring-2 ring-[#141517] overflow-hidden"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=50" className="object-cover" /></span>
               </div>
               <p>Liked by <span className="font-semibold text-zinc-400">{post.likedBy[0]}</span> and {post.likes + 14} others</p>
             </div>
@@ -252,9 +247,9 @@ export const ListingFeed: React.FC = () => {
               <div className="h-6 w-6 rounded-full bg-zinc-700 overflow-hidden">
                 <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150" alt="" className="object-cover h-full w-full" />
               </div>
-              <input 
-                type="text" 
-                placeholder="Add a comment..." 
+              <input
+                type="text"
+                placeholder="Add a comment..."
                 className="flex-1 bg-transparent text-xs text-zinc-300 outline-none placeholder-zinc-600"
               />
               <button className="text-[11px] font-bold text-zinc-500 hover:text-emerald-400 transition-colors">Reply</button>

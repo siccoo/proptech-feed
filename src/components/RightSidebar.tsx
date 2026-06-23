@@ -4,8 +4,6 @@ import { ArrowRight } from 'lucide-react';
 export const RightSidebar: React.FC = () => {
   return (
     <aside className="sticky top-[69px] hidden h-[calc(100vh-69px)] w-72 flex-col gap-4 overflow-y-auto p-4 xl:flex">
-      
-      {/* Trending Locations */}
       <div className="rounded-[8px] bg-[#0F1113] border border-[rgba(255,255,255,0.06)] p-4">
         <div className="flex items-center gap-[2px] font-semibold text-xs tracking-wider mb-3">
           <img src="./mapPin.png" alt="Trending" className="h-4 w-4" />
@@ -25,7 +23,6 @@ export const RightSidebar: React.FC = () => {
         </div>
       </div>
 
-      {/* Hot Requests */}
       <div className="rounded-2xl bg-[#0F1113] border border-[rgba(255,255,255,0.06)] p-4">
         <div className="flex items-center gap-[4px] font-semibold text-xs tracking-wider mb-3">
           <img src="./hot-request.png" alt="request" className="h-4 w-4" />
@@ -58,7 +55,6 @@ export const RightSidebar: React.FC = () => {
         </div>
       </div>
 
-      {/* Top Communities */}
       <div className="rounded-2xl bg-[#0F1113] border border-[rgba(255,255,255,0.06)] p-4">
         <div className="flex items-center gap-[2px] font-semibold text-xs tracking-wider mb-3">
           <img src="./users.png" alt="Trending" className="h-4 w-4" />

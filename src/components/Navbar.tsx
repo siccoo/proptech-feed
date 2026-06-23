@@ -11,8 +11,6 @@ export const Navbar: React.FC = () => {
     <>
       <header className="sticky top-0 z-50 border-b border-zinc-800 bg-[#0F1113] px-4 py-3 lg:px-8">
         <div className="mx-auto flex max-w-[1440px] items-center justify-between">
-
-          {/* Left: Logo - Reduced size on mobile */}
           <div className="flex items-center gap-2">
             <img
               src="./expert-logo.png"
@@ -31,9 +29,7 @@ export const Navbar: React.FC = () => {
             <a href="#" className="hover:text-white transition-colors pb-2">Find Professionals</a>
           </nav>
 
-          {/* Right: Actions */}
           <div className="flex items-center gap-4">
-            {/* Notification Bell - Hidden on mobile view */}
             <button className="relative rounded-full p-2 cursor-pointer transition-all hidden md:block">
               <Bell className="h-5 w-5 text-[#B8B8B8]" />
             </button>
@@ -42,7 +38,6 @@ export const Navbar: React.FC = () => {
               List Property
             </button>
 
-            {/* Sign In Button - Plain text on mobile, standard pill button layout on desktop */}
             <button className="cursor-pointer transition-all text-sm font-medium text-[#B8B8B8] hover:text-white bg-transparent p-0 rounded-none md:bg-[#2F8F63] md:px-5 md:py-2 md:font-semibold md:text-white md:rounded-full">
               Sign In
             </button>
@@ -63,8 +58,6 @@ export const Navbar: React.FC = () => {
       {/* Responsive Mobile Navigation Off-Canvas Side Overlay Drawer System */}
       {isMenuOpen && (
         <div className="fixed inset-0 z-50 flex md:hidden animate-fade-in">
-
-          {/* Left Portion: Remaining 30% interactive clickable click-out mask backdrop */}
           <div
             className="w-[30vw] bg-black/60 backdrop-blur-xs cursor-pointer"
             onClick={closeMenu}
@@ -72,10 +65,7 @@ export const Navbar: React.FC = () => {
 
           {/* Right Portion: 70% deep black content navigation drawer */}
           <div className="w-[70vw] h-full bg-[#0B0C0F] p-6 flex flex-col space-y-6 shadow-2xl border-l border-zinc-900 animate-slide-in">
-
-            {/* Drawer Header Close Row Action Button */}
             <div className="flex items-center justify-between border-b border-zinc-900 pb-4">
-              {/* <span className="text-xs uppercase tracking-widest text-zinc-500 font-bold">Navigation</span> */}
               <button
                 onClick={closeMenu}
                 className="text-zinc-400 p-1 rounded-full hover:bg-zinc-900 cursor-pointer"
@@ -84,7 +74,6 @@ export const Navbar: React.FC = () => {
               </button>
             </div>
 
-            {/* Replicated Mobile Context Navigation Route Menu List */}
             <nav className="font-open-runde flex flex-col gap-4 text-base font-medium text-zinc-400">
               <a
                 href="#"
