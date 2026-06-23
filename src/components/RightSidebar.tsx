@@ -1,14 +1,15 @@
 import React from 'react';
-import { ChevronRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 export const RightSidebar: React.FC = () => {
   return (
     <aside className="sticky top-[69px] hidden h-[calc(100vh-69px)] w-72 flex-col gap-4 overflow-y-auto p-4 xl:flex">
       
       {/* Trending Locations */}
-      <div className="rounded-2xl bg-[#0F1113] p-4">
-        <div className="flex items-center gap-2 text-amber-400 font-semibold text-xs uppercase tracking-wider mb-3">
-          <span className="h-1.5 w-1.5 rounded-full bg-amber-400" /> Trending Locations
+      <div className="rounded-[8px] bg-[#0F1113] border border-[rgba(255,255,255,0.06)] p-4">
+        <div className="flex items-center gap-[2px] font-semibold text-xs tracking-wider mb-3">
+          <img src="./mapPin.png" alt="Trending" className="h-4 w-4" />
+          <span className="text-white" /> Trending Locations
         </div>
         <div className="space-y-3">
           {[
@@ -25,15 +26,16 @@ export const RightSidebar: React.FC = () => {
       </div>
 
       {/* Hot Requests */}
-      <div className="rounded-2xl bg-[#0F1113] p-4">
-        <div className="flex items-center gap-2 text-amber-400 font-semibold text-xs uppercase tracking-wider mb-3">
-          <span className="h-1.5 w-1.5 rounded-full bg-amber-400" /> Hot Requests
+      <div className="rounded-2xl bg-[#0F1113] border border-[rgba(255,255,255,0.06)] p-4">
+        <div className="flex items-center gap-[4px] font-semibold text-xs tracking-wider mb-3">
+          <img src="./hot-request.png" alt="request" className="h-4 w-4" />
+          <span className="text-white" /> Hot Requests
         </div>
         <div className="space-y-3">
-          <div className="rounded-xl bg-[#1A1B1E] p-3 text-xs border border-zinc-800/40">
+          <div className="rounded-xl p-3 text-xs border border-[rgba(255,255,255,0.06)]">
             <div className="flex gap-2">
-              <span className="rounded-md bg-zinc-800 px-1.5 py-0.5 font-bold text-zinc-300">Buy</span>
-              <span className="font-semibold text-zinc-300">Lekki Phase 1, Lagos</span>
+              <span className="font-bold text-[rgba(245, 245, 245, 1)]">Buy</span>
+              <span className="font-semibold text-[rgba(245, 245, 245, 1)]">Lekki Phase 1, Lagos</span>
             </div>
             <p className="text-zinc-400 my-1.5 line-clamp-2">Looking for a 4-bed detached in Lekki Phase 1</p>
             <div className="flex justify-between text-zinc-500 text-[11px]">
@@ -42,10 +44,10 @@ export const RightSidebar: React.FC = () => {
             </div>
           </div>
 
-          <div className="rounded-xl bg-[#1A1B1E] p-3 text-xs border border-zinc-800/40">
+          <div className="rounded-xl p-3 text-xs border border-[rgba(255,255,255,0.06)]">
             <div className="flex gap-2">
-              <span className="rounded-md bg-zinc-800 px-1.5 py-0.5 font-bold text-zinc-300">Rent</span>
-              <span className="font-semibold text-zinc-300">Ikoyi</span>
+              <span className="font-bold text-[rgba(245, 245, 245, 1)]">Rent</span>
+              <span className="font-semibold text-[rgba(245, 245, 245, 1)]">Ikoyi</span>
             </div>
             <p className="text-zinc-400 my-1.5 line-clamp-2">2-bed serviced apartment in Ikoyi, max ₦15M/yr</p>
             <div className="flex justify-between text-zinc-500 text-[11px]">
@@ -57,9 +59,10 @@ export const RightSidebar: React.FC = () => {
       </div>
 
       {/* Top Communities */}
-      <div className="rounded-2xl bg-[#141517] p-4">
-        <div className="flex items-center gap-2 text-emerald-400 font-semibold text-xs uppercase tracking-wider mb-3">
-          <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" /> Top Communities
+      <div className="rounded-2xl bg-[#0F1113] border border-[rgba(255,255,255,0.06)] p-4">
+        <div className="flex items-center gap-[2px] font-semibold text-xs tracking-wider mb-3">
+          <img src="./users.png" alt="Trending" className="h-4 w-4" />
+          <span className="text-white" /> Top Communities
         </div>
         <div className="space-y-2">
           {[
@@ -67,12 +70,12 @@ export const RightSidebar: React.FC = () => {
             { name: 'Abuja Developers Group', members: '5.6k members' },
             { name: 'House hunting Circle', members: '1.4k members' },
           ].map((comm) => (
-            <div key={comm.name} className="flex items-center justify-between rounded-xl p-2 hover:bg-[#1A1B1E] cursor-pointer transition-colors">
+            <div key={comm.name} className="flex items-center justify-between rounded-xl p-2 hover:bg-[#1A1B1E] border border-[rgba(255,255,255,0.06)] cursor-pointer transition-colors">
               <div>
                 <p className="text-xs font-semibold text-zinc-200">{comm.name}</p>
                 <p className="text-[11px] text-zinc-500 mt-0.5">{comm.members}</p>
               </div>
-              <ChevronRight className="h-4 w-4 text-zinc-600" />
+              <ArrowRight className="h-4 w-4 text-zinc-600" />
             </div>
           ))}
         </div>
