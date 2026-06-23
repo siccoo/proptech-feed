@@ -10,7 +10,7 @@ function App() {
       <Navbar />
       
       {/* Structural responsive layout split system */}
-      <div className="mx-auto flex max-w-[1440px] items-start justify-center pb-20 md:pb-0">
+      <div className="mx-auto flex max-w-[1440px] bg-[#141517] items-start justify-center pb-20 md:pb-0">
         <LeftSidebar />
         <main className="flex-1 min-w-0">
           <ListingFeed />

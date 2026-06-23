@@ -1,9 +1,17 @@
 import React from 'react';
-import { MapPin, Tag, Heart, MessageSquare, Send, Bookmark, CheckCircle, ChevronLeft, ChevronRight, Image as ImageIcon, Play } from 'lucide-react';
+import { MapPin, Tag, Heart, MessageSquare, Send, Bookmark, CheckCircle, Play } from 'lucide-react';
 import type { Post } from '../types/feed';
 
 // Mock Data conforming strictly to visual assets
 const mockStories = [
+  { name: 'Alex', avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150' },
+  { name: 'Jordan', avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150' },
+  { name: 'Taylor', avatar: 'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=150' },
+  { name: 'Jamie', avatar: 'https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?w=150' },
+  { name: 'Jordan', avatar: 'https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=150' },
+  { name: 'Emerson...', avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150' },
+  { name: 'Sydney', avatar: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150' },
+  { name: 'Quinn', avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150' },
   { name: 'Alex', avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150' },
   { name: 'Jordan', avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150' },
   { name: 'Taylor', avatar: 'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=150' },
@@ -73,7 +81,7 @@ export const ListingFeed: React.FC = () => {
       </div>
 
       {/* Share Box / Create Post Component */}
-      <div className="rounded-2xl bg-[#141517] p-4 border border-zinc-900">
+      <div className="rounded-2xl bg-[#0F1113] p-4 border border-zinc-900">
         <div className="flex gap-4 border-b border-zinc-800/80 pb-3 mb-4 text-xs font-semibold">
           <button className="text-zinc-400 flex items-center gap-1.5">🏢 Property</button>
           <button className="text-emerald-400 border-b-2 border-emerald-400 pb-3 -mb-[13px] flex items-center gap-1.5">💬 General</button>
@@ -104,7 +112,7 @@ export const ListingFeed: React.FC = () => {
       {/* Feed Dynamic Item Cards */}
       <div className="space-y-4">
         {mockPosts.map((post) => (
-          <article key={post.id} className="rounded-2xl bg-[#141517] p-4 border border-zinc-900/60 space-y-3.5">
+          <article key={post.id} className="rounded-2xl bg-[#0F1113] p-4 border border-zinc-900/60 space-y-3.5">
             
             {/* Header section */}
             <div className="flex items-center justify-between">

@@ -3,10 +3,10 @@ import { ChevronRight } from 'lucide-react';
 
 export const RightSidebar: React.FC = () => {
   return (
-    <aside className="sticky top-[69px] hidden h-[calc(100vh-69px)] w-72 flex-col gap-4 overflow-y-auto bg-[#0B0C0F] p-4 xl:flex border-l border-zinc-900">
+    <aside className="sticky top-[69px] hidden h-[calc(100vh-69px)] w-72 flex-col gap-4 overflow-y-auto p-4 xl:flex">
       
       {/* Trending Locations */}
-      <div className="rounded-2xl bg-[#141517] p-4">
+      <div className="rounded-2xl bg-[#0F1113] p-4">
         <div className="flex items-center gap-2 text-amber-400 font-semibold text-xs uppercase tracking-wider mb-3">
           <span className="h-1.5 w-1.5 rounded-full bg-amber-400" /> Trending Locations
         </div>
@@ -25,7 +25,7 @@ export const RightSidebar: React.FC = () => {
       </div>
 
       {/* Hot Requests */}
-      <div className="rounded-2xl bg-[#141517] p-4">
+      <div className="rounded-2xl bg-[#0F1113] p-4">
         <div className="flex items-center gap-2 text-amber-400 font-semibold text-xs uppercase tracking-wider mb-3">
           <span className="h-1.5 w-1.5 rounded-full bg-amber-400" /> Hot Requests
         </div>
