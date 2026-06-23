@@ -1,0 +1,17 @@
+@import "tailwindcss";
+@import '@fontsource/open-runde';
+
+body {
+  font-family: 'Open Runde', sans-serif;
+}
+
+/* Optional custom scrollbar utility used by the component avatar feed */
+@layer utilities {
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-none {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
