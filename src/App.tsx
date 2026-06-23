@@ -2,7 +2,7 @@ import { Navbar } from './components/Navbar';
 import { LeftSidebar } from './components/LeftSidebar';
 import { ListingFeed } from './components/ListingFeed';
 import { RightSidebar } from './components/RightSidebar';
-import { MobileTabBar } from './components/MobileTabbar';
+import { MobileTabbar } from './components/MobileTabbar';
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
         <RightSidebar />
       </div>
 
-      <MobileTabBar />
+      <MobileTabbar />
     </div>
   );
 }

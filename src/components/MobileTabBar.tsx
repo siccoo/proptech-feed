@@ -1,7 +1,7 @@
 import React from 'react';
 import { Home, Search, Plus, Bell, User } from 'lucide-react';
 
-export const MobileTabBar: React.FC = () => {
+export const MobileTabbar: React.FC = () => {
     return (
         <div className="fixed bottom-0 left-0 right-0 z-50 border-t border-zinc-900 bg-[#0B0C0F]/90 p-2 backdrop-blur-lg md:hidden">
             <div className="relative flex items-center justify-around px-2">
