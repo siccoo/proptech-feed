@@ -50,10 +50,10 @@ export const Navbar: React.FC = () => {
             {/* Hamburger Trigger Menu Button */}
             <button
               onClick={toggleMenu}
-              className="rounded-full p-1 text-zinc-400 hover:bg-zinc-900 md:hidden cursor-pointer"
+              className="rounded-full p-1 text-white hover:bg-zinc-900 md:hidden cursor-pointer"
               aria-label="Toggle navigation menu"
             >
-              <Menu className="h-6 w-6" />
+              <Menu className="h-6 w-6 " />
             </button>
           </div>
 
