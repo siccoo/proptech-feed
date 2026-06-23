@@ -72,7 +72,7 @@ export const ListingFeed: React.FC = () => {
       <div className="flex gap-3.5 overflow-x-auto pb-1 scrollbar-none">
         {mockStories.map((story, idx) => (
           <div key={idx} className="flex flex-col items-center flex-shrink-0 cursor-pointer">
-            <div className="h-[62px] w-[62px] rounded-full border-2 border-emerald-400 p-[2px]">
+            <div className="h-[62px] w-[62px] rounded-full border-[2px] border-[#2F8F63] p-[2px]">
               <img src={story.avatar} alt={story.name} className="h-full w-full rounded-full object-cover" />
             </div>
             <span className="text-xs text-zinc-400 mt-1.5 max-w-[64px] truncate">{story.name}</span>
@@ -83,9 +83,9 @@ export const ListingFeed: React.FC = () => {
       {/* Share Box / Create Post Component */}
       <div className="rounded-2xl bg-[#0F1113] p-4 border border-zinc-900">
         <div className="flex gap-4 border-b border-zinc-800/80 pb-3 mb-4 text-xs font-semibold">
-          <button className="text-zinc-400 flex items-center gap-1.5">🏢 Property</button>
-          <button className="text-emerald-400 border-b-2 border-emerald-400 pb-3 -mb-[13px] flex items-center gap-1.5">💬 General</button>
-          <button className="text-zinc-400 flex items-center gap-1.5">🙋‍♂️ Request</button>
+          <button className="text-zinc-400 flex items-center gap-1.5"> <img src="./property-list.png" alt="Property" className="h-4 w-4" /> Property</button>
+          <button className="text-[#2F8F63] border-b-1 border-[#2F8F63] pb-3 -mb-[13px] flex items-center gap-1.5"><img src="./general-list.svg" alt="General" className="h-4 w-4" /> General</button>
+          <button className="text-zinc-400 flex items-center gap-1.5"><img src="./request-list.svg" alt="Request" className="h-4 w-4" /> Request</button>
         </div>
         <div className="flex gap-3">
           <div className="h-9 w-9 rounded-full bg-zinc-700 overflow-hidden flex-shrink-0">
@@ -101,7 +101,7 @@ export const ListingFeed: React.FC = () => {
               <button className="flex items-center gap-1.5 text-xs text-zinc-400 hover:text-white transition-colors">
                 <MapPin className="h-3.5 w-3.5 text-zinc-500" /> Location
               </button>
-              <button className="rounded-full bg-emerald-600 px-4 py-1.5 text-xs font-bold text-zinc-950 hover:bg-emerald-500 transition-colors">
+              <button className="rounded-full bg-[#2F8F63] px-4 py-1.5 text-xs font-medium text-white hover:bg-[#2F8F63] cursor-pointer transition-colors">
                 Post
               </button>
             </div>
