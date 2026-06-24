@@ -36,7 +36,7 @@ export const LeftSidebar: React.FC = () => {
         ))}
       </div>
 
-      <button className="mt-auto flex items-center justify-center gap-2 rounded-full bg-[#2F8F63] py-3 text-sm font-bold text-white transition-all">
+      <button className="mt-5 flex items-center justify-center gap-2 rounded-full bg-[#2F8F63] py-3 text-sm font-bold text-white transition-all">
         <Plus className="h-4 w-4 stroke-[3]" />
         Create Post
       </button>
